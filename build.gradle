@@ -34,7 +34,7 @@ jar {
 startScripts {
     doLast {
         windowsScript.text = windowsScript.text.replace('java.exe', 'javaw.exe')
-        windowsScript.text = windowsScript.text.replace('java.exe', 'start "" "%JAVA_EXE%" %DEFAULT_JVM_OPTS%')
+        windowsScript.text = windowsScript.text.replace('"%JAVA_EXE%" %DEFAULT_JVM_OPTS%', 'start "" "%JAVA_EXE%" %DEFAULT_JVM_OPTS%')
     }
 }
 
